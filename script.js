@@ -36,33 +36,4 @@
     node.textContent = String(new Date().getFullYear());
   });
 
-  const auditForm = document.querySelector('#audit-form');
-  const formStatus = document.querySelector('#form-status');
-
-  if (auditForm) {
-    auditForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-
-      if (!auditForm.reportValidity()) return;
-
-      const form = new FormData(auditForm);
-      const lines = [
-        'Hi,',
-        '',
-        "I'd like a quick homepage audit.",
-        '',
-        `Name: ${String(form.get('name') || '').trim()}`,
-        `Business: ${String(form.get('business') || '').trim()}`,
-        `Website: ${String(form.get('website') || '').trim()}`,
-        `Main service to prioritise: ${String(form.get('service') || '').trim()}`,
-        '',
-        'Thanks,'
-      ];
-      const subject = 'Audit request – TradeSite Sprint';
-      const href = `mailto:adnanmunye@googlemail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
-
-      if (formStatus) formStatus.textContent = 'Opening a prepared message in your email app…';
-      window.location.href = href;
-    });
-  }
 })();
