@@ -193,6 +193,13 @@ h1 em, h2 em { font-family: Iowan Old Style, Baskerville, Georgia, serif; font-w
 .signal-row p { margin: 0; font-size: .72rem; font-weight: 700; }
 .signal-row i { width: 3px; height: 3px; background: rgba(255,255,255,.3); border-radius: 50%; }
 
+.starter-switch { color: var(--ink); background: #ece5d8; border-bottom: 1px solid var(--line); }
+.starter-switch .shell { display: flex; flex-direction: column; gap: 13px; padding-top: 18px; padding-bottom: 18px; }
+.starter-switch p { display: flex; flex-direction: column; margin: 0; font-size: .83rem; }
+.starter-switch p span { color: #9a3f27; font-size: .58rem; font-weight: 850; letter-spacing: .13em; }
+.starter-switch p b { font-weight: 750; }
+.starter-switch a { display: inline-flex; gap: 9px; align-items: center; align-self: flex-start; color: var(--ink); font-size: .75rem; font-weight: 850; text-underline-offset: 4px; }
+
 /* Problem */
 .problem-section { background: var(--paper); }
 .split-heading h2 { max-width: 750px; }
@@ -314,6 +321,7 @@ h1 em, h2 em { font-family: Iowan Old Style, Baskerville, Georgia, serif; font-w
 .faq-list details[open] summary span { transform: rotate(45deg); }
 .faq-list details p { padding: 0 35px 16px 0; color: var(--muted); font-size: .8rem; }
 .audit-panel { align-self: start; padding: 28px 23px; color: #fff; background: var(--ink-soft); border-radius: var(--radius); box-shadow: var(--shadow); }
+.contact-anchor { display: block; height: 0; scroll-margin-top: 95px; }
 .audit-panel h3 { margin-bottom: 8px; font-size: 1.8rem; letter-spacing: -.045em; }
 .audit-panel > p:not(.panel-label) { color: rgba(255,255,255,.58); font-size: .86rem; }
 .field-row { margin-top: 17px; }
@@ -372,6 +380,9 @@ h1 em, h2 em { font-family: Iowan Old Style, Baskerville, Georgia, serif; font-w
   .boundary-grid { grid-template-columns: repeat(2, 1fr); }
   .excluded-panel { border-top: 0; border-left: 1px solid rgba(255,255,255,.15); }
   .footer-bottom { flex-direction: row; align-items: center; justify-content: space-between; }
+  .starter-switch .shell { flex-direction: row; align-items: center; justify-content: space-between; gap: 30px; }
+  .starter-switch p { flex-flow: row wrap; gap: 9px; align-items: baseline; }
+  .starter-switch a { flex: 0 0 auto; align-self: center; }
 }
 
 @media (min-width: 860px) {
